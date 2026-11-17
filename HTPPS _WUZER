@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>htpps_wuzer</title>
+
+<style>
+body {
+    background: black;
+    color: #00ff41;
+    font-family: monospace;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 0 0 15px #00ff41;
+}
+
+#terminal {
+    font-size: 16px;
+    line-height: 2;
+    text-shadow: 0 0 8px #00ff41;
+}
+
+.name {
+    color: #00ffff;
+    font-size: 23px;
+    font-weight: bold;
+    text-shadow: 0 0 15px #00ffff;
+}
+</style>
+</head>
+
+<body>
+
+<h1>htpps_wuzer</h1>
+
+<div id="terminal"></div>
+
+<script>
+const lines = [
+"> Initializing system...",
+"> Loading IT tools...",
+"> Connecting to terminal...",
+"> Starting programming...",
+"> Python: READY",
+"> HTML: READY",
+"> CSS: READY",
+"> JavaScript: READY",
+"> Cyber Security: READY",
+"> System status: ONLINE",
+"> Developer: SHODLIKBEK",
+"> ACCESS GRANTED!",
+"> ===========================",
+"> WEB_WUZER SHODLIKBEK",
+"> ===========================",
+"> SYSTEM COMPLETED..."
+];
+
+let i = 0;
+
+function showLine() {
+    if (i < lines.length) {
+        let terminal = document.getElementById("terminal");
+
+        if (lines[i].includes("WEB_WUZER")) {
+            terminal.innerHTML +=
+            '<div class="name">' + lines[i] + '</div>';
+        } else {
+            terminal.innerHTML += lines[i] + "<br>";
+        }
+
+        i++;
+        setTimeout(showLine, 500);
+    }
+}
+
+showLine();
+</script>
+
+</body>
+</html>
